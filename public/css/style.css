@@ -1,0 +1,209 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'; 
+
+* { /* aqui tira toda a margem do titulo */
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-font: #111111;
+    --color-main-section-one: #FBDFDB;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}  
+
+header {
+    display: flex;
+    width: 940px;
+    padding: 30px 30px 30px 0;
+    margin: 0 auto;   
+}    
+
+.logo {
+    margin-right: 122.4px;
+ }
+
+.links a {
+    margin-right: 30px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+main {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.main-section-one{
+    margin: 0 auto;
+    width: 940px;
+    height: 366px;
+    background-color: var(--color-main-section-one);
+    border-radius: 30px;
+    border-radius: 30px;
+    display: flex;
+}
+
+.main-section-one 
+.section-one {
+    margin-right: 240px;
+}
+
+.main-section-one h1 {
+    padding-left: 60px;
+    padding-top: 117px;
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--color-font);
+}
+
+.main-section-one p {
+    padding-left: 60px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    opacity: 0,7;
+    max-width: 316px;
+    margin-top: 10px;
+}
+
+.chefe img {
+    margin-top: 66px;
+}
+
+.wrapper {
+    font-size: 24px;
+    color: var(--color-font);
+    margin-top: 50px;
+}
+
+footer {
+    margin-top: 50px;
+    background: #EEEEEE;
+    height: 62px;
+    align-content: center;   
+    display: flex;
+   }
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+    margin: auto;    
+}  
+
+
+/* =========== CARDS ================= */
+
+.card {
+    cursor: pointer;  
+}
+
+.cards {
+   margin-top: 20px;
+   display: grid; /* forma dispay */
+   grid-template-columns: 1fr 1fr 1fr; /* o "1fr" signica que fez 3 colunas*/
+   gap: 20px; /* espaço de card e outro */  
+}
+
+.card__image img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+    border-radius: 15px;    
+}
+
+.card__image img:hover {
+    background-color: white;
+    border-radius: 16px;
+    transform: scale(1.05);
+    transition: transform .2s linear;
+}
+
+.card__info h2 {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+    color: var(--color-font);
+}
+
+.card__info p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;    
+}
+
+
+/* ==== MODAL ==== */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* aqui ele coloca uma pagina porcima da outra com a opacidade de 0.7 */
+    width: 100%; /* Largura */
+    height: 100%; /* Altura */
+    position: fixed; /* posição fixasada quer dizer que a pagina fica fixisada */
+    top: 0px; /* aqui ele pucha a pagina com a opcidade la para o topo */
+    opacity: 0;  /*pagina com opacidade some */
+    visibility: hidden; /* visibilidade escondida*/
+    margin: 0 auto;
+}
+
+
+.modal {
+    background-color: #FFFFFF; /* cor de fundo */
+    width: 660px; /* Largura */
+    height: 413px; /* Altura */
+    margin: 20vh auto; /* margin de 5 vh visão de altura 5 top e 5 em baixo */
+    border-radius: 16px;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal p {
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #999999;
+    line-height: 26px;
+    cursor: pointer;
+    margin-top: 60px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.modal .modal_info h2 {
+    font-family: Roboto-Regular;
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modal .modal_info h3 {
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    color: #777777;
+    text-align: center;
+}
+
+/* ==== MODAL.ACTIVE ==== */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal img {
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    border-radius: 15px;
+    margin: 30px 30px 0px 30px;
+}
